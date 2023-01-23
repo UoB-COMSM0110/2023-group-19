@@ -1,2 +1,3 @@
 # 2023-group-19
-![IMG_2629](https://user-images.githubusercontent.com/123096231/214070817-b2ebf2db-2932-4998-a32e-0ed60c0c04c6.jpg)
+
+![IMG_2629](https://user-images.githubusercontent.com/123096231/214071389-a1bf75ec-d29e-419d-9f30-5e83f7aa6fd6.jpg)
