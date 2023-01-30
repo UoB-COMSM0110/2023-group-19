@@ -2,6 +2,6 @@ Starsector https://fractalsoftworks.com/
 Tank Battle 2D (mobile game) 
 League of Legends
 Super Mario 
-Tetris
-Snake
-2048
+Tetris 
+Snake - But you're the food which has to run away from the snake
+2048 
