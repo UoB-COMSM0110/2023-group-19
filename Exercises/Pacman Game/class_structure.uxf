@@ -1,0 +1,20 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>140</y><w>210</w><h>160</h></coordinates><panel_attributes>Board
+--
++ board : int[=20][=20]
+--
++ getPacmanLocation() : int y int x
++ placePill(int y, int x) 
++ placeMarble(int y, int x)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>370</y><w>210</w><h>140</h></coordinates><panel_attributes>&lt;abstract&gt;
+/Figure/
+--
+
+--
+/+ getName() : String/
+/+ getLocation(): int y, int x/
+/+ setLocation(int y, int x) /
+/+ setName(String)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>640</y><w>210</w><h>190</h></coordinates><panel_attributes>Pacman
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>500</y><w>110</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>290</y><w>160</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;80</additional_attributes></element></diagram>
