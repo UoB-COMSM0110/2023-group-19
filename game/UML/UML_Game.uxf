@@ -1,0 +1,118 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>880</x><y>141</y><w>210</w><h>160</h></coordinates><panel_attributes>/&lt;abstract&gt;/
+/Map/
+--
+/ + background : image [1] /
+/ + xsize : int [1] /
+/ + ysize : int [1] /
+--
+/ + getBackground () : image /
+/ + getXSize () : int /
+/ + getYSize () : int /
+/ + getMap() : image /
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>191</y><w>210</w><h>60</h></coordinates><panel_attributes>Map
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1720</x><y>61</y><w>210</w><h>280</h></coordinates><panel_attributes>/ &lt;abstract&gt; /
+/ Ship /
+--
+/ + outlinecolour : int /
+/ + outlinethickness : int /
+/ + sprite : image /
+/ + location : int x, int y /
+/ + gunfirerate : int /
+/ + gundamage : int /
+/ + speed : int /
+/ + turnrate : int /
+/ + destroyed : boolean /
+/ + hitpoints : int /
+--
+/ + getLocation() : int x, int y /
+/ + setLocation(int x, int y) : void /
+/ + setDestroyed() : void /
+/ + fireGun() : void /
+/ + getSprite() : image /</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1500</x><y>411</y><w>210</w><h>140</h></coordinates><panel_attributes>PlayerShip
+--
++ missilespeed : int
+- missilenumber : int
+--
++ fireMissile() : void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1860</x><y>521</y><w>290</w><h>140</h></coordinates><panel_attributes>/ &lt;abstract&gt; /
+/ Enemy Ship /
+--
+/ + pointValue : int /
+--
+/ + directToLocation(int y, int x) : void /
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>331</y><w>170</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1850</x><y>331</y><w>130</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1730</x><y>751</y><w>290</w><h>60</h></coordinates><panel_attributes>RegularEnemy
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1900</x><y>651</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;30;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2060</x><y>721</y><w>290</w><h>90</h></coordinates><panel_attributes>Boss
+--
++ specialweapondamage : int
++ specialweaponfirerate : int
+--
++ fireSpecial() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2110</x><y>651</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>751</y><w>210</w><h>110</h></coordinates><panel_attributes>Setup
+--
+- currentmap : int
+--
+- radomMap() : int
+- loadMap() : void
+- loadSprite(image, int x, int y) : void
+- loadUI(image) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>531</y><w>690</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;220;670;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2120</x><y>61</y><w>210</w><h>70</h></coordinates><panel_attributes>Sprite
+--
++ sprites : image[]
+--
++ getSprite(int) : image
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1920</x><y>91</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Text</id><coordinates><x>2090</x><y>71</y><w>30</w><h>30</h></coordinates><panel_attributes>*1*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1930</x><y>71</y><w>50</w><h>30</h></coordinates><panel_attributes>* 1 . . * *</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>840</x><y>701</y><w>30</w><h>30</h></coordinates><panel_attributes>*1 *</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1460</x><y>511</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>191</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>781</y><w>920</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;900;10</additional_attributes></element><element><id>Text</id><coordinates><x>1690</x><y>761</y><w>40</w><h>30</h></coordinates><panel_attributes>*1 . . **</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>860</x><y>751</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>850</x><y>821</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>241</y><w>160</w><h>530</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;510;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>600</x><y>251</y><w>50</w><h>30</h></coordinates><panel_attributes>*1 . . **</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>750</x><y>721</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>301</y><w>210</w><h>130</h></coordinates><panel_attributes>UI
+--
+- healthbar : image
+- points : text
+--
++ incrementPoints(int) : void
++ loadHealthBar() : image
++ updateHealthBar() : void
++ loadPoints() : text
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>371</y><w>450</w><h>400</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>430;380;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>630</x><y>711</y><w>50</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>210</x><y>351</y><w>50</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>1011</y><w>340</w><h>120</h></coordinates><panel_attributes>Scene Logic
+--
++ enemymax : int
++ gameover : boolean
+--
++ getEnemySpawnLocation(int x, int y) : int max, int min
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>841</y><w>320</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;300;170</additional_attributes></element><element><id>Text</id><coordinates><x>840</x><y>861</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1100</x><y>1011</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1810</x><y>971</y><w>210</w><h>160</h></coordinates><panel_attributes>Draw
+--
+- enemycount : int
+- timer : int
+--
+- spawnEnemy() : void
+- spawnBoss() : void
+- updateEnemy() : void
+- updateBoss() : void
+- updatePlayer() : void
+- drawGameOver() : void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1510</x><y>541</y><w>320</w><h>450</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;300;430</additional_attributes></element><element><id>Relation</id><coordinates><x>1880</x><y>801</y><w>30</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>1980</x><y>801</y><w>220</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes>200;10;10;170</additional_attributes></element><element><id>Text</id><coordinates><x>1540</x><y>551</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1810</x><y>941</y><w>30</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1890</x><y>941</y><w>30</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>2010</x><y>941</y><w>30</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2630</x><y>961</y><w>210</w><h>90</h></coordinates><panel_attributes>User Input
+--
+--
++ keyPressLMB() : void
++ keyPressRMB() : void
++ keyPressW() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2010</x><y>991</y><w>640</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;620;10</additional_attributes></element><element><id>Text</id><coordinates><x>1850</x><y>811</y><w>40</w><h>30</h></coordinates><panel_attributes>*1 . . **</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>2180</x><y>821</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1460</x><y>1011</y><w>370</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;30;350;20</additional_attributes></element><element><id>Text</id><coordinates><x>1470</x><y>1041</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1770</x><y>1001</y><w>40</w><h>30</h></coordinates><panel_attributes>*1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>421</y><w>1140</w><h>680</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;270;630;1120;660</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2150</x><y>261</y><w>210</w><h>70</h></coordinates><panel_attributes>Weapon
+--
++ weaponsprite : image
+--
++ fireWeapon() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2360</x><y>411</y><w>210</w><h>90</h></coordinates><panel_attributes>Missile
+--
+@Overwrite
++ weaponsprite : image
+--
++ targetEnemy() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2350</x><y>321</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1920</x><y>191</y><w>250</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;230;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1700</x><y>431</y><w>680</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;660;10</additional_attributes></element></diagram>
