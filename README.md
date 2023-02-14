@@ -9,7 +9,9 @@
 
 ### UML
 
-I've uploaded the [UML diagram](game/UML/UML_Game.pdf), when editing it please download the included [import file](game/UML/UML_Game.uxf) to https://www.umletino.com/umletino.html and then reupload the changes *INCLUDING* the new Diagram file.
+I've uploaded the [UML diagram](game/UML/UML_Game.pdf), when editing it please download the included [import file](game/UML/UML_Game.uxf) to https://www.umletino.com/umletino.html and then reupload the changes _**INCLUDING**_ the new Diagram file:
+
+![image](.resources/UML_instructions.JPG)
 
 ---
 ### Paper Prototype
