@@ -1,6 +1,10 @@
 ## 2023-group-19
 ![IMG_2629](https://user-images.githubusercontent.com/123096231/214071389-a1bf75ec-d29e-419d-9f30-5e83f7aa6fd6.jpg)
 
+### The Game
+
+I've now started on the game, files are [here](game/src/sectorstar) Theres an additional folder holding the game images under `game/resources` so `git pull` the repo into your personal machine and you can make edits.
+
 
 ### Index
 #### [UML Diagram](#uml) 
