@@ -3,5 +3,6 @@ void setup(){
    Map map = new Map();
 
    background(map.background[0]); //test
+   //dgh
 
 }
