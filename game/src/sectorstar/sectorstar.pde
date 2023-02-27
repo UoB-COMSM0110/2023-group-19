@@ -4,5 +4,11 @@ void setup(){
 
    background(map.background[0]); //test
    //dghcdfghchg
+   
+   
+   Move.movePlayer();
+   
+   
+   
 
 }
