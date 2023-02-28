@@ -22,22 +22,33 @@ class Player {
   }
   // simple draw a player
   void draw() {
-    fill(255, 0, 0); // set to red
-    ellipse(x, y, 50, 50); // Set to circle
+    Explosion ex = new Explosion(x,y);
+  ex.showExplosion();
+  //test ship
+  Hero hero = new Hero(x+100,y+100);
+  hero.show();
+  Enermy1 emy1 = new Enermy1(x+50,y+50);
+  emy1.show();
+  Enermy2 emy2 = new Enermy2(x,y);
+  emy2.show();
+  Enermy3 emy3 = new Enermy3(x-50,y-50);
+  emy3.show();
+  Enermy4 emy4 = new Enermy4(x-100,y-100);
+  emy4.show(); 
   }
 }
 
 // new players
 Player player = new Player();
 
-void setup() {
-  size(1800, 1000); // from the sectorstar
-}
+//void setup() {
+//  size(1800, 1000); // from the sectorstar
+//}
 
-void draw() {
-  background(128); // I dont know why when I tried to set up the background, either it is very stuck or there are residual shadows on the map.
-  player.draw(); // draw the player
-}
+//void draw() {
+//  background(128); // I dont know why when I tried to set up the background, either it is very stuck or there are residual shadows on the map.
+//  player.draw(); // draw the player
+//}
 
 void keyPressed() {
   if (keyCode == UP) { // w
