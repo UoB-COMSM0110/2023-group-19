@@ -10,6 +10,7 @@ void setup(){
 void draw(){
   background(map.getBackground());
   player.draw();
+  enemy1.draw();
   //may add a random emy1 class
   //emy1.draw();
 }

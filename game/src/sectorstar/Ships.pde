@@ -1,46 +1,39 @@
-
-class Hero {
-    private int xCoor, yCoor;//x,y-coorinate 
-    private PImage hero;
-   
-    public Hero(int x, int y) {
-      if (hero == null){
-            hero = loadImage("../../resources/ships/hero.png");;
-        }
-        this.xCoor = x;
-        this.yCoor = y;
-    }
+class ShipSprite {
+    protected int xCoor, yCoor;//x,y-coorinate 
+    protected PImage sprite;
     
     public void show(int transx, int transy, float rotation){
          pushMatrix();
          imageMode(CENTER);
-         translate(transx,transy);
+         translate(xCoor + transx, yCoor + transy);
          rotate(rotation+PI/2);
-         image(hero,0, 0);
-         
-                  imageMode(CENTER);
-
+         image(sprite,0, 0);
          popMatrix();
     }
 }
 
-class Enermy1 {
-    private int xCoor, yCoor;//x,y-coorinate 
-    private PImage emy1;
-   
-    public Enermy1(int x, int y) {
-      if (emy1 == null){
-            emy1 = loadImage("../../resources/ships/enermy1.png");;
+class Hero extends ShipSprite {
+    public Hero(int x, int y) {
+      if (sprite == null){
+            sprite = loadImage("../../resources/ships/hero.png");;
         }
         this.xCoor = x;
         this.yCoor = y;
     }
+}
+
+class Enemy1Sprite extends ShipSprite {
     
-    public void show(){
-         image(emy1,xCoor, yCoor);
+    public Enemy1Sprite(int x, int y) {
+      if (sprite == null){
+            sprite = loadImage("../../resources/ships/enermy1.png");;
+        }
+        this.xCoor = x;
+        this.yCoor = y;
     }
 }
 
+//And so on...
 
 class Enermy2 {
     private int xCoor, yCoor;//x,y-coorinate 
