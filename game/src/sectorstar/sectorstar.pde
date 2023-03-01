@@ -2,7 +2,7 @@ Map map;
 
 void setup(){
   size(1800,1000);
-  frameRate(30);
+  frameRate(60);
   map = new Map();
   background(map.getBackground());
 }

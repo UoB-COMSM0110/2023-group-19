@@ -11,8 +11,16 @@ class Hero {
         this.yCoor = y;
     }
     
-    public void show(){
-         image(hero,xCoor, yCoor);
+    public void show(int transx, int transy, float rotation){
+         pushMatrix();
+         imageMode(CENTER);
+         translate(transx,transy);
+         rotate(rotation+PI/2);
+         image(hero,0, 0);
+         
+                  imageMode(CENTER);
+
+         popMatrix();
     }
 }
 

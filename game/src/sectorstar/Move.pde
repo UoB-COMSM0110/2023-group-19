@@ -2,21 +2,26 @@
 class Player {
   int x=900;// the location of the players
   int y = 500; //put in the middle
-  int speed = 5; // player speed
+  int speed = 2; // player speed
+  int transy = 100;
+  int transx = 100;
+  float rotation = radians(-90);
   // player move
   void move(int dir) {
     switch (dir) {
       case 0: // up
-        y -= speed;
+        transx += 5*cos(rotation);
+        transy += 5*sin(rotation);
         break;
       case 1: // down
-        y += speed;
+        transx -= 5*cos(rotation);
+        transy -= 5*sin(rotation);
         break;
       case 2: // left
-        x -= speed;
+        rotation -= PI/20;
         break;
       case 3: // right
-        x += speed;
+        rotation += PI/20;
         break;
     }
   }
@@ -26,7 +31,7 @@ class Player {
   ex.showExplosion();
   //test ship
   Hero hero = new Hero(x+100,y+100);
-  hero.show();
+  hero.show(transx, transy, rotation);
   Enermy1 emy1 = new Enermy1(x+50,y+50);
   emy1.show();
   Enermy2 emy2 = new Enermy2(x,y);
