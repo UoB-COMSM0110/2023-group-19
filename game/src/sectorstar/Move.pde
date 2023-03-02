@@ -1,26 +1,29 @@
 // define a player
 class Ship {
+  public boolean[] movementKeys = new boolean[4];
   int speed = 2; // player speed
   int transy = 0;
   int transx = 0;
   float rotation = radians(-90);
   // player move
-  void move(int dir) {
-    switch (dir) {
-      case 0: // up
+  void move() {
+    //forward
+    if (movementKeys[0]){
         transx += 5*cos(rotation);
         transy += 5*sin(rotation);
-        break;
-      case 1: // down
+    }
+    //back
+    if (movementKeys[1]){
         transx -= 5*cos(rotation);
         transy -= 5*sin(rotation);
-        break;
-      case 2: // left
+    }
+    //left rotate
+    if (movementKeys[2]){
         rotation -= PI/30;
-        break;
-      case 3: // right
-        rotation += PI/30;
-        break;
+    }
+    //right rotate
+    if (movementKeys[3]){ 
+      rotation += PI/30;
     }
   }
 }
@@ -48,16 +51,15 @@ Player player = new Player();
 Enemy1 enemy1 = new Enemy1();
 
 void keyPressed() {
-  if (keyCode == UP) { // w
-    player.move(0);
-  } 
-  if (keyCode == DOWN) { //
-    player.move(1);
-  } 
-  if (keyCode == LEFT) { //
-    player.move(2);
-  }if (keyCode == RIGHT) { //
-    player.move(3);
-  }
-  
+  if (keyCode == UP) {player.movementKeys[0] = true;} 
+  if (keyCode == DOWN) {player.movementKeys[1] = true;} 
+  if (keyCode == LEFT) {player.movementKeys[2] = true;}
+  if (keyCode == RIGHT) {player.movementKeys[3] = true;}
+}
+
+void keyReleased() {
+  if (keyCode == UP) {player.movementKeys[0] = false;} 
+  if (keyCode == DOWN) {player.movementKeys[1] = false;} 
+  if (keyCode == LEFT) {player.movementKeys[2] = false;}
+  if (keyCode == RIGHT) {player.movementKeys[3] = false;}
 }
