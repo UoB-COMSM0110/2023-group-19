@@ -9,9 +9,11 @@ void setup(){
 
 void draw(){
   background(map.getBackground());
+  enemy1.draw();
+  enemy1.auto();
   player.draw();
   player.move();
-  enemy1.draw();
+  
   //may add a random emy1 class
   //emy1.draw();
 }
