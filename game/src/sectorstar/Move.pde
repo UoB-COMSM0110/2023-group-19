@@ -1,39 +1,19 @@
 // define a player
 class Ship {
-  public boolean[] movementKeys = new boolean[4];
-  int speed = 2; // player speed
   int transy = 0;
   int transx = 0;
   float rotation = radians(-90);
- 
-  // player move
-  void move() {
-    //forward
-    if (movementKeys[0]){
-        transx += 5*cos(rotation);
-        transy += 5*sin(rotation);
-    }
-    //back
-    if (movementKeys[1]){
-        transx -= 5*cos(rotation);
-        transy -= 5*sin(rotation);
-    }
-    //left rotate
-    if (movementKeys[2]){
-        rotation -= PI/30;
-    }
-    //right rotate
-    if (movementKeys[3]){ 
-      rotation += PI/30;
-    }
-  }
 }
 
 
 
 class Player extends Ship {
+  public boolean[] movementKeys = new boolean[4];
   int x = 0;
   int y = 0;
+  int speed = 5;
+  
+  
   void draw() {
   ShipSprite hero = new Hero(400,400);
   hero.show(transx, transy, rotation);
@@ -46,10 +26,31 @@ class Player extends Ship {
   public int getY(){
     return y;
   }
+  void move() {
+    //forward
+    if (movementKeys[0]){
+        transx += speed*cos(rotation);
+        transy += speed*sin(rotation);
+    }
+    //back
+    if (movementKeys[1]){
+        transx -= speed*cos(rotation);
+        transy -= speed*sin(rotation);
+    }
+    //left rotate
+    if (movementKeys[2]){
+        rotation -= PI/30;
+    }
+    //right rotate
+    if (movementKeys[3]){ 
+      rotation += PI/30;
+    }
+  }
   
 };
 
 class Enemy1 extends Ship {
+  int speed = 2;
   int x = 0;
   int y = 0;
  void draw() {
@@ -73,19 +74,19 @@ class Enemy1 extends Ship {
 
  if(player.getX() - enemy1.getX() >= 0 && Math.abs(player.getX() - enemy1.getX()) > 100){
    enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
-transx+=5;
+transx+=speed;
   }
   if(player.getX() - enemy1.getX() <= 0 && Math.abs(player.getX() - enemy1.getX()) > 100){
    enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
-transx-=5;
+transx-=speed;
   }
   if(player.getY() - enemy1.getY() >= 0 && Math.abs(player.getY() - enemy1.getY()) > 100){
    enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
-transy+=5;
+transy+=speed;
   }
   if(player.getY() - enemy1.getY() <= 0 && Math.abs(player.getY() - enemy1.getY()) > 100){
    enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
-transy-=5;
+transy-=speed;
   }
  }
 }
