@@ -6,13 +6,13 @@ void setup(){
   frameRate(60);
   map = new Map();
   healthbar = new Healthbars();
-  
   background(map.getBackground());
   
 }
 
 void draw(){
   background(map.getBackground());
+  healthbar.draw();
   enemy1.draw();
   enemy1.auto();
   player.draw();
