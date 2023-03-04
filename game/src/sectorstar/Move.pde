@@ -6,7 +6,27 @@ class Ship {
   float rotation = radians(-90);
   
   Gun gun = new Gun(1000);
+}
 
+class Player extends Ship {
+  public boolean[] movementKeys = new boolean[4];
+  int x = 0;
+  int y = 0;
+  int speed = 5;
+  
+  
+  void draw() {
+  ShipSprite hero = new Hero(400,400);
+  hero.show(transx, transy, rotation);
+  x = hero.xCoor+transx;
+  y = hero.yCoor+transy;
+  }
+  public int getX(){
+    return x;
+  }
+  public int getY(){
+    return y;
+  }
   void move() {
     //forward
     gun.updateProjectiles();
@@ -31,20 +51,48 @@ class Ship {
      gun.fire(transx+400, transy+400 , rotation);  
     }
   }
-}
-
-class Player extends Ship {
-  void draw() {
-  ShipSprite hero = new Hero(400,400);
-  hero.show(transx, transy, rotation);
-  }
+  
 };
 
 class Enemy1 extends Ship {
+  int speed = 2;
+  int x = 0;
+  int y = 0;
  void draw() {
   ShipSprite enemy1 = new Enemy1Sprite(600,600);
   enemy1.show(transx,transy,rotation);
-  
+  x = enemy1.xCoor+transx;
+  y = enemy1.yCoor+transy;
+ }
+  public int getX(){
+    return x;
+  }
+  public int getY(){
+    return y;
+  }
+
+ void auto(){
+     //text (player.getX(), 50, 50);
+     //text (player.getY(), 100, 50);
+     //text (enemy1.getX(), 50 ,100);
+     //text (enemy1.getY(), 100, 100);
+
+ if(player.getX() - enemy1.getX() >= 0 && Math.abs(player.getX() - enemy1.getX()) > 100){
+   enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
+transx+=speed;
+  }
+  if(player.getX() - enemy1.getX() <= 0 && Math.abs(player.getX() - enemy1.getX()) > 100){
+   enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
+transx-=speed;
+  }
+  if(player.getY() - enemy1.getY() >= 0 && Math.abs(player.getY() - enemy1.getY()) > 100){
+   enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
+transy+=speed;
+  }
+  if(player.getY() - enemy1.getY() <= 0 && Math.abs(player.getY() - enemy1.getY()) > 100){
+   enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
+transy-=speed;
+  }
  }
 }
 

@@ -1,7 +1,8 @@
 class ShipSprite {
     protected int xCoor, yCoor;//x,y-coorinate 
     protected PImage sprite;
-    
+  
+   
     public void show(int transx, int transy, float rotation){
          pushMatrix();
          imageMode(CENTER);
@@ -31,6 +32,9 @@ class Enemy1Sprite extends ShipSprite {
         this.xCoor = x;
         this.yCoor = y;
     }
+    // public int getxCoor(){
+    // return xCoor; 
+    //}
 }
 
 //And so on...
