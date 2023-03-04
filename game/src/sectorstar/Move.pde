@@ -1,21 +1,23 @@
 // define a player
 class Ship {
   public boolean[] movementKeys = new boolean[4];
-  int speed = 2; // player speed
-  int transy = 0;
-  int transx = 0;
+  public boolean[] weaponFiring = new boolean[2];
+  int speed = 5, transy = 0, transx = 0;
   float rotation = radians(-90);
-  // player move
+  
+  Gun gun = new Gun(1000);
+
   void move() {
     //forward
+    gun.updateProjectiles();
     if (movementKeys[0]){
-        transx += 5*cos(rotation);
-        transy += 5*sin(rotation);
+        transx += speed*cos(rotation);
+        transy += speed*sin(rotation);
     }
     //back
     if (movementKeys[1]){
-        transx -= 5*cos(rotation);
-        transy -= 5*sin(rotation);
+        transx -= speed*cos(rotation);
+        transy -= speed*sin(rotation);
     }
     //left rotate
     if (movementKeys[2]){
@@ -24,6 +26,9 @@ class Ship {
     //right rotate
     if (movementKeys[3]){ 
       rotation += PI/30;
+    }
+    if (weaponFiring[0]){
+     gun.fire(transx+400, transy+400 , rotation);  
     }
   }
 }
@@ -55,6 +60,7 @@ void keyPressed() {
   if (keyCode == DOWN) {player.movementKeys[1] = true;} 
   if (keyCode == LEFT) {player.movementKeys[2] = true;}
   if (keyCode == RIGHT) {player.movementKeys[3] = true;}
+  if (key == ' ') {player.weaponFiring[0] = true;}
 }
 
 void keyReleased() {
@@ -62,4 +68,5 @@ void keyReleased() {
   if (keyCode == DOWN) {player.movementKeys[1] = false;} 
   if (keyCode == LEFT) {player.movementKeys[2] = false;}
   if (keyCode == RIGHT) {player.movementKeys[3] = false;}
+  if (key == ' ') {player.weaponFiring[0] = false;}
 }
