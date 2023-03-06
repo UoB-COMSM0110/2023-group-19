@@ -12,4 +12,4 @@
 | 8 | As a player I wish to see nice innterface when interacting with the game so that I can navigate the menu easily |
 | 9 | As a player I wish to see nice animations when playing the game so that I enjoy the gameplay more |
 | 10 | As a player I wish to finsih the game when my ship has been destroyed, so that the game ends |
-| 11 | As a player if I fail i'd like to see a hint so I can improve next time |
+| 11 | As a player if my life bar get's low i'd like to see a hint so I can improve |
