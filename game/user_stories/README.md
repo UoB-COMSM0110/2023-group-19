@@ -9,3 +9,4 @@
 | 5 | As a player I wish to view leaderboards to compare my scores with others |
 | 6 | As a developer I wish to have simple source code so that I can debug the game quickly |
 | 7 | As a player I wish to have more ships coming in during the battle so that I can carry on playing the game after defeating the first enemies |
+| 8 | As a player I wish to see nice innterface when interacting with the game so that I can navigate the menu easily|
