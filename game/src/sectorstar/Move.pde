@@ -97,11 +97,56 @@ transy-=speed;
 }
 
 // And so on...
+class Enemy2 extends Ship {
+  int speed = 2;
+  int x = 0;
+  int y = 0;
+ void draw() {
+  ShipSprite enemy2 = new Enemy2Sprite(10,10);
+  enemy2.show(transx,transy,rotation);
+  x = enemy2.xCoor+transx;
+  y = enemy2.yCoor+transy;
+ }
+  public int getX(){
+    return x;
+  }
+  public int getY(){
+    return y;
+  }
+
+ void auto(){
+     //text (player.getX(), 50, 50);
+     //text (player.getY(), 100, 50);
+     //text (enemy2.getX(), 50 ,100);
+     //text (enemy2.getY(), 100, 100);
+
+ if(player.getX() - enemy2.getX() >= 0 && Math.abs(player.getX() - enemy2.getX()) > 100){
+   enemy2.rotation = atan2(player.getY()-enemy2.getY(), player.getX()-enemy2.getX());
+transx+=speed;
+  }
+  if(player.getX() - enemy2.getX() <= 0 && Math.abs(player.getX() - enemy2.getX()) > 100){
+   enemy2.rotation = atan2(player.getY()-enemy2.getY(), player.getX()-enemy2.getX());
+transx-=speed;
+  }
+  if(player.getY() - enemy2.getY() >= 0 && Math.abs(player.getY() - enemy2.getY()) > 100){
+   enemy2.rotation = atan2(player.getY()-enemy2.getY(), player.getX()-enemy2.getX());
+transy+=speed;
+  }
+  if(player.getY() - enemy2.getY() <= 0 && Math.abs(player.getY() - enemy2.getY()) > 100){
+   enemy2.rotation = atan2(player.getY()-enemy2.getY(), player.getX()-enemy2.getX());
+transy-=speed;
+  }
+ }
+}
+
+
+
 
 
 // new players
 Player player = new Player();
 Enemy1 enemy1 = new Enemy1();
+Enemy2 enemy2 = new Enemy2();
 
 void keyPressed() {
   if (keyCode == UP) {player.movementKeys[0] = true;} 

@@ -38,23 +38,20 @@ class Enemy1Sprite extends ShipSprite {
 }
 
 //And so on...
-
-class Enermy2 {
-    private int xCoor, yCoor;//x,y-coorinate 
-    private PImage emy2;
-   
-    public Enermy2(int x, int y) {
-      if (emy2 == null){
-            emy2 = loadImage("../../resources/ships/enermy2.png");;
+class Enemy2Sprite extends ShipSprite {
+    
+    public Enemy2Sprite(int x, int y) {
+      if (sprite == null){
+            sprite = loadImage("../../resources/ships/enermy2.png");;
         }
         this.xCoor = x;
         this.yCoor = y;
     }
-    
-    public void show(){
-         image(emy2,xCoor, yCoor);
-    }
+    // public int getxCoor(){
+    // return xCoor; 
+    //}
 }
+
 
 
 class Enermy3 {

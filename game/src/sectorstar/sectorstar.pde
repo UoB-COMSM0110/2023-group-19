@@ -17,7 +17,8 @@ void draw(){
   enemy1.auto();
   player.draw();
   player.move();
-  
+  enemy2.draw();
+  enemy2.auto();
   //may add a random emy1 class
   //emy1.draw();
 }
