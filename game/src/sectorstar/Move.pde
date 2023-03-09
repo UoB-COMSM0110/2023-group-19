@@ -76,7 +76,7 @@ class Enemy1 extends Ship {
      //text (player.getY(), 100, 50);
      //text (enemy1.getX(), 50 ,100);
      //text (enemy1.getY(), 100, 100);
-
+//Stop when Enemy 2 is close to Enemy 1, maybe 50
  if(player.getX() - enemy1.getX() >= 0 && Math.abs(player.getX() - enemy1.getX()) > 100){
    enemy1.rotation = atan2(player.getY()-enemy1.getY(), player.getX()-enemy1.getX());
 transx+=speed;
