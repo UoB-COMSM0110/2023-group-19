@@ -16,7 +16,7 @@
 ## Points
 
 | Entry | Score - Adam | Score - Person 2 |
-| --- | --- |
+| --- | --- | --- |
 | 1 | 5 |
 | 2 | 13 |
 | 3 | 8 |
