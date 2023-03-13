@@ -1,0 +1,15 @@
+1 - Move Ship 
+
+* what is the front of the ship?
+* it takes time to control the direction
+* the arrow keys should not rotate the ship, can i use mouse instead
+
+2 - Shoot Weapon
+
+* no explosion 
+* how to shoot
+* didn't know that holding the space bar shoots multiple
+* place to record score
+
+
+
