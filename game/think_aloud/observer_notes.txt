@@ -3,6 +3,17 @@
 * what is the front of the ship?
 * it takes time to control the direction
 * the arrow keys should not rotate the ship, can i use mouse instead
+* why do enemies always follow the blue thing?
+* controls not easy enough, direction controls not easy
+
+---
+
+Good:
+
+background is good.
+
+---
+
 
 2 - Shoot Weapon
 
@@ -10,6 +21,7 @@
 * how to shoot
 * didn't know that holding the space bar shoots multiple
 * place to record score
+* only one target?
 
 
 
