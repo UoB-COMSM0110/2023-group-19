@@ -5,6 +5,7 @@
 * the arrow keys should not rotate the ship, can i use mouse instead
 * why do enemies always follow the blue thing?
 * controls not easy enough, direction controls not easy
+* window didn't show the health bar, because the screen height was too large
 
 ---
 
